@@ -1,0 +1,71 @@
+{
+    "key": "group_644a390f8fb44",
+    "title": "Kassameddelande",
+    "fields": [
+        {
+            "key": "field_644a39352421d",
+            "label": "Ikon",
+            "name": "custom-checkout-message__icon",
+            "aria-label": "",
+            "type": "image_aspect_ratio_crop",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "crop_type": "free_crop",
+            "return_format": "id",
+            "preview_size": "medium",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_644a39102421c",
+            "label": "Meddelande ovanför kassan",
+            "name": "custom-checkout-message__text",
+            "aria-label": "",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "basic",
+            "media_upload": 0,
+            "delay": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page",
+                "operator": "==",
+                "value": "3661"
+            }
+        ]
+    ],
+    "menu_order": 200,
+    "position": "acf_after_title",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1682588924
+}

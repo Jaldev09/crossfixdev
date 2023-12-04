@@ -1,0 +1,208 @@
+{
+    "key": "group_5d53f9128802b",
+    "title": "Kategori information",
+    "fields": [
+        {
+            "key": "field_5d53f93dd7499",
+            "label": "Använd sidtitel som rubrik?",
+            "name": "category-information__use-page-title",
+            "type": "true_false",
+            "instructions": "Välj om du vill använda sidans titel som rubrik eller använda en egen rubrik",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 1,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_5d53f973d749a",
+            "label": "Anpassad rubrik",
+            "name": "category-information__custom-page-title",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5d53f93dd7499",
+                        "operator": "!=",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5d53fae5d749e",
+            "label": "Kategoribeskrivning",
+            "name": "category-information__category-description",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1,
+            "default_value": "",
+            "delay": 0
+        },
+        {
+            "key": "field_5d53f9e3d749b",
+            "label": "Lägg till bild för kategori",
+            "name": "category-information__use-image",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_5d53fa24d749c",
+            "label": "Bakgrundsbild",
+            "name": "category-information__background-image",
+            "type": "image",
+            "instructions": "Visas som en rund cirkel bredvid rubriken",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5d53f9e3d749b",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "30",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "id",
+            "preview_size": "thumbnail",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_5d5ceb624b6f6",
+            "label": "Tona ner bakgrundsbild?",
+            "name": "category-information__tone-down-background-image",
+            "type": "true_false",
+            "instructions": "Tona ner bakgrundsbilden för att ge mer kontrast på ljusa bilder.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5d53f9e3d749b",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_5d53fa87d749d",
+            "label": "Förgrundsbild",
+            "name": "category-information__foreground-image",
+            "type": "image",
+            "instructions": "Visas ovanpå bakgrundsbilden. Lämplig för t.ex. märkeslogotyper.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5d53f9e3d749b",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "45",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "id",
+            "preview_size": "thumbnail",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "taxonomy",
+                "operator": "==",
+                "value": "product_cat"
+            }
+        ],
+        [
+            {
+                "param": "page_parent",
+                "operator": "==",
+                "value": "3286"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "acf_after_title",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [
+        "the_content"
+    ],
+    "active": 1,
+    "description": "",
+    "modified": 1566371666
+}

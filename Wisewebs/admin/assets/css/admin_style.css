@@ -1,0 +1,59 @@
+/**
+ *
+ * @package    YoloTheme
+ * @version    1.0.0
+ * @created    21/12/2015
+ * @author     Administrator <admin@yolotheme.com>
+ * @copyright  Copyright (c) 2015, YoloTheme
+ * @license    http://opensource.org/licenses/gpl-2.0.php GPL v2 or later
+ * @link       http://yolotheme.com
+*/
+
+/****************** Form Add Sidebar ********************/
+#yolo-form-add-sidebar {
+	background-color: #fafafa;
+	border: 1px solid #e5e5e5;
+	padding: 30px 10px;margin: 20px 0;
+	color: #23282d;
+	text-align: center;
+	-webkit-box-shadow: 0 1px 1px rgba(0,0,0,.04); 
+	box-shadow: 0 1px 1px rgba(0,0,0,.04);
+}
+#yolo-form-add-sidebar input[type="text"] {
+	width: 350px;
+	vertical-align: middle;
+	line-height:21px;
+}
+#yolo-add-sidebar{
+	border: none;
+	border-radius: 0;
+}
+.sidebar-yolo-custom-sidebar .delete-sidebar {
+	position: absolute;
+	top: 14px;
+	right: -1px;
+	font-size: 15px;
+	color: #ccc;
+	z-index: 99;
+}
+.sidebar-yolo-custom-sidebar .delete-sidebar:hover{
+	color: #aaa;
+}
+
+/****************** Widget *****************************/
+#widgets-right .widget-inside textarea{
+	white-space: normal;
+	min-height: 100px;
+}
+
+/****************** Add Post column *****************************/
+#post-format.column-post-format {
+	width: 100px;
+	text-align: center;
+}
+.post-format.column-post-format {
+	text-align: center;
+}
+.manage-column.column-post-format {
+	text-align: center;
+}

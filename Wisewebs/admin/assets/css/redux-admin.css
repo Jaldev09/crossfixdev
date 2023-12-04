@@ -1,0 +1,419 @@
+/**  
+ * Style for theme options 
+ *
+ * @package    YoloTheme
+ * @version    1.0.0
+ * @created    21/12/2015
+ * @author     Administrator <admin@yolotheme.com>
+ * @copyright  Copyright (c) 2015, YoloTheme
+ * @license    http://opensource.org/licenses/gpl-2.0.php GPL v2 or later
+ * @link       http://yolotheme.com
+*/
+
+.redux-container-image_select .redux-image-select {
+    max-width: 100%;
+}
+.redux-field-container .select2-container-multi {
+    display: block;
+    width: 100% !important;
+}
+.redux-container-sorter ul {
+    width: 215px;
+}
+.redux-container-sorter ul .ui-sortable-handle {
+    font-weight: 600;
+    font-size: 12px;
+}
+.redux-section-indent-start h3 {
+    border-bottom: none!important;
+    margin: 0;
+    padding: 5px 15px;
+    background-color: #0082C1;
+    display: inline-block;
+    border-radius: 5px 5px 0 0;
+    font-size: 14px;
+    font-weight: 600;
+    color: #FFFFFF;
+}
+
+.redux-container .redux-group-tab h3 {
+    margin-top: 20px!important;
+    line-height: 2em;
+}
+
+.redux-container .redux-group-tab h2 {
+    margin-top: 20px!important;
+    line-height: 2em;
+    border-bottom: 1px solid #E7E7E7;
+}
+
+.redux-section-indent-start {
+    border-bottom: solid 3px #0082C1;
+}
+
+.redux-main .form-table-section-indented {
+    margin-left: 0;
+}
+
+.redux_field_th {
+    font-weight: 600;
+}
+
+.redux-sidebar .redux-group-menu li.active a,
+.redux-sidebar .redux-group-menu li.active a:hover,
+.redux-sidebar .redux-group-menu li.activeChild a,
+.redux-sidebar .redux-group-menu li.activeChild a:hover {
+    background: #FCFCFC;
+    color: #269ad6;
+    width: 184px;
+    opacity: 1
+}
+
+.redux-sidebar .redux-group-menu li.active a li a {
+    background: #333;
+    padding-left: 5px
+}
+
+.redux-sidebar .redux-group-menu li.divide {
+    padding: 0;
+    border-width: 1px 0;
+    border-style: solid;
+    border-bottom-color: #E7E7E7;
+    border-top-color: #F9F9F9
+}
+
+.redux-sidebar .redux-group-menu li a:first-child {
+    border-top: none
+}
+
+.redux-sidebar .redux-group-menu li a {
+    display: block;
+    padding: 12px 4px 12px 14px;
+    background: #e0e0e0;
+    background: transparent;
+    border-width: 1px 0;
+    border-style: solid;
+    border-bottom-color: #E7E7E7;
+    border-top-color: #F9F9F9;
+    opacity: 0.7;
+    color: #555;
+    font-weight: normal;
+    text-decoration: none;
+    -webkit-transition: none;
+    transition: none
+}
+
+.redux-sidebar .redux-group-menu li a.custom-tab {
+    background: #f6f6f6
+}
+
+.redux-sidebar .redux-group-menu li a img {
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    left: 15px
+}
+
+.redux-sidebar .redux-group-menu li a:hover {
+    background: #e5e5e5;
+    color: #777;
+    opacity: 1
+}
+
+.redux-sidebar .redux-menu-warning,
+.redux-sidebar .redux-menu-error,
+.redux-sidebar .hasSubSections .extraIconSubsections {
+    display: inline-block;
+    float: right;
+    padding: 6px 7px 4px 7px;
+    margin-left: 4px;
+    font-family: sans-serif;
+    font-size: 9px;
+    font-weight: bold;
+    line-height: 9px;
+    border-radius: 10px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border: 0 solid transparent
+}
+
+.redux-sidebar .redux-menu-warning i,
+.redux-sidebar .redux-menu-error i,
+.redux-sidebar .hasSubSections .extraIconSubsections i {
+    margin-left: -3px;
+    margin-top: -3px
+}
+
+.redux-sidebar .redux-menu-error {
+    background-color: #b94a48;
+    color: #f2dede
+}
+
+.redux-sidebar .redux-menu-warning {
+    background-color: #C09853;
+    color: #FCF8E3
+}
+
+.redux-sidebar ul .subsection {
+    display: none
+}
+
+.redux-sidebar .redux-group-tab-link-a {
+    position: relative;
+    outline: 0
+}
+
+.redux-sidebar .redux-group-tab-link-a i {
+    vertical-align: middle;
+    font-size: 1.35em;
+    position: absolute
+}
+
+.redux-sidebar .redux-group-tab-link-a span {
+    display: block
+}
+
+.redux-sidebar .redux-group-tab-link-a span.group_title {
+    padding-left: 30px
+}
+
+.redux-sidebar .redux-group-tab-link-li a.hasError span.group_title {
+    padding-right: 25px
+}
+
+
+#redux-header {
+    position: relative
+}
+
+.redux-container #redux-header .display_header span.redux-dev-mode-notice {
+    position: absolute;
+    left: 20px;
+    bottom: 9px;
+    background-color: #f0ad4e;
+    display: inline;
+    padding: .2em .6em .3em;
+    font-weight: 700;
+    line-height: 1;
+    color: #fff !important;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: .25em
+}
+
+.redux-main {
+    position: relative
+}
+
+.redux-main #redux-sticky {
+    min-height: 32px;
+    margin-left: -20px;
+    margin-right: -20px;
+    margin-top: -10px;
+    margin-bottom: 8px
+}
+
+.redux-main #redux-sticky #info_bar {
+    height: 32px
+}
+
+.redux-main #redux-sticky #info_bar .expand_options {
+    margin-top: 4px
+}
+
+.redux-main #redux-footer-sticky {
+    margin-left: -20px;
+    margin-right: -20px;
+    margin-bottom: -10px
+}
+
+.redux-sidebar #redux-header {
+    text-align: center
+}
+
+.redux-sidebar #redux-header .display_header {
+    float: none
+}
+
+.redux-container .redux-action_bar {
+    float: right;
+    margin-top: 52.5px;
+}
+
+.button.reset_all_btn,
+.button.reset_btn,
+.button.redux_generate,
+input#redux_save.button {
+    border: none;
+    text-align: center;
+    vertical-align: middle;
+    padding: 0 15px;
+    height: auto;
+    border: none;
+    line-height: 40px;
+    outline: none;
+    letter-spacing: 1px;
+    box-shadow: none;
+    color: #fff;
+    transition: all linear 0.2s;
+}
+
+.redux_generate.button {
+    background: #0082C1;
+    margin-right: 10px;
+}
+
+.redux_generate.button:hover {
+    background: #02cdb3;
+}
+
+input#redux_save.button {
+    background: #0082C1;
+    margin-right: 10px;
+}
+
+input#redux_save.button:hover {
+    background: #02cdb3;
+}
+
+.button.reset_btn {
+    background: #394c60;
+    margin-right: 10px;
+}
+
+.button.reset_all_btn {
+    background: #fc481e;
+    margin-right: 50px
+}
+
+.redux-container #redux-footer .redux-action_bar .button.reset_all_btn {
+    margin-right: 10px
+}
+
+h2.to_logo {
+    text-indent: -9999em;
+    display: block;
+    height: 58px;
+    width: 203px;
+    background: url(../img/to_logo.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding: 0px;
+    margin-top: 50px;
+}
+
+.redux-container #redux-footer .redux-action_bar {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.redux-container #redux-header {
+    background: url(../img/top_bg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-color: #00d4fa;
+    height: 150px;
+    padding: 0;
+}
+
+.redux-container #info_bar {
+    text-align: right;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: none;
+    padding: 0;
+    margin: 0;
+}
+
+#redux-sticky {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.redux-container #redux-header .display_header {
+    float: left;
+    margin: 0px 0 0 85px;
+    height: 150px;
+}
+
+
+.redux-container #redux-header .expand_options {
+    cursor: pointer;
+    display: block;
+    height: 21px;
+    width: 23px;
+    float: left;
+    font-size: 0;
+    text-indent: -9999px;
+    margin: 70px 0 0 30px;
+    border: none;
+    border-radius: 0px;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+    background: url(../img/toggle_tabs.png);
+    background-size: contain;
+}
+
+.redux-container .expand_options.expanded {
+    opacity: 0.6;
+}
+
+.redux-container .expand_options:focus {
+    color: #ffffff;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.redux-container .expand_options:hover {
+    border-color: #888
+}
+
+.redux-container #redux-footer #redux-share {
+    float: left;
+    line-height: 28px;
+    font-size: 25px;
+    margin-top: 20px;
+}
+
+.admin-color-fresh #redux-footer #redux-share a:hover {
+    color: #373a4b;
+}
+
+.redux-container #redux-footer #redux-share a {
+    text-decoration: none;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.admin-color-fresh #redux-header {
+    border-bottom-style: none;
+}
+
+.admin-color-fresh #redux-header .display_header span.spinner {
+    position: relative;
+    bottom: 0;
+
+}
+
+.spinner {
+    background: url(../img/spinner.gif) no-repeat;
+    float: left;
+    margin-top: 4px;
+    width: 32px;
+    height: 32px;
+}
+
+.admin-color-fresh #redux-header .display_header span {
+    position: relative;
+    display: block;
+    bottom: 40px;
+}
+.admin-color-fresh .redux-sidebar .redux-group-menu li.hasSubSections ul.subsection li a {
+    padding: 12px 4px 12px 14px!important;
+}

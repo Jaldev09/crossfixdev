@@ -1,0 +1,1199 @@
+{
+    "key": "group_5cf50ed918b37",
+    "title": "Innehåll",
+    "fields": [
+        {
+            "key": "field_5cf50ee16c913",
+            "label": "Innehåll",
+            "name": "flexible-content",
+            "type": "flexible_content",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layouts": {
+                "layout_5cf50ef4c8660": {
+                    "key": "layout_5cf50ef4c8660",
+                    "name": "hero",
+                    "label": "Toppbild",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5f686fd821b72",
+                            "label": "Variant",
+                            "name": "hero_variant",
+                            "type": "radio",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "tall": "Startsida",
+                                "medium": "Undersida - Skala proportionerligt",
+                                "low": "Undersida - Fast höjd"
+                            },
+                            "allow_null": 0,
+                            "other_choice": 0,
+                            "default_value": "",
+                            "layout": "vertical",
+                            "return_format": "value",
+                            "save_other_choice": 0
+                        },
+                        {
+                            "key": "field_5cf52cdfbd5ad",
+                            "label": "Bild",
+                            "name": "hero__images",
+                            "type": "repeater",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_5f686fd821b72",
+                                        "operator": "==",
+                                        "value": "tall"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "collapsed": "",
+                            "min": 1,
+                            "max": 1,
+                            "layout": "block",
+                            "button_label": "",
+                            "sub_fields": [
+                                {
+                                    "key": "field_5cf50f166c914",
+                                    "label": "Bild",
+                                    "name": "hero__image",
+                                    "type": "image_aspect_ratio_crop",
+                                    "instructions": "",
+                                    "required": 1,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "50",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "aspect_ratio_width": 1125,
+                                    "aspect_ratio_height": 682,
+                                    "return_format": "id",
+                                    "preview_size": "thumbnail",
+                                    "library": "all",
+                                    "min_width": 1125,
+                                    "min_height": 682,
+                                    "min_size": "",
+                                    "max_width": "",
+                                    "max_height": "",
+                                    "max_size": "",
+                                    "mime_types": "",
+                                    "crop_type": "aspect_ratio"
+                                },
+                                {
+                                    "key": "field_5cf61ebed2302",
+                                    "label": "Tona ner bild?",
+                                    "name": "hero__darken-image",
+                                    "type": "true_false",
+                                    "instructions": "Tonar ner bilden för att göra texten tydligare",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "50",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "message": "",
+                                    "default_value": 0,
+                                    "ui": 1,
+                                    "ui_on_text": "",
+                                    "ui_off_text": ""
+                                },
+                                {
+                                    "key": "field_5cf51149489a8",
+                                    "label": "Rubrik",
+                                    "name": "hero__title",
+                                    "type": "text",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "maxlength": ""
+                                },
+                                {
+                                    "key": "field_5cf51184489a9",
+                                    "label": "Text",
+                                    "name": "hero__text",
+                                    "type": "textarea",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "placeholder": "",
+                                    "maxlength": "",
+                                    "rows": 2,
+                                    "new_lines": "br"
+                                },
+                                {
+                                    "key": "field_5cf51195489aa",
+                                    "label": "Knapp",
+                                    "name": "hero__button",
+                                    "type": "link",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "return_format": "array"
+                                }
+                            ]
+                        },
+                        {
+                            "key": "field_5f68a93c198b8",
+                            "label": "Bild",
+                            "name": "hero__low-image",
+                            "type": "image_aspect_ratio_crop",
+                            "instructions": "",
+                            "required": 1,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_5f686fd821b72",
+                                        "operator": "==",
+                                        "value": "low"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "50",
+                                "class": "",
+                                "id": ""
+                            },
+                            "crop_type": "aspect_ratio",
+                            "aspect_ratio_width": 1400,
+                            "aspect_ratio_height": 230,
+                            "return_format": "id",
+                            "preview_size": "medium",
+                            "library": "all",
+                            "min_width": "",
+                            "min_height": "",
+                            "min_size": "",
+                            "max_width": "",
+                            "max_height": "",
+                            "max_size": "",
+                            "mime_types": ""
+                        },
+                        {
+                            "key": "field_5f68a995198b9",
+                            "label": "Bild",
+                            "name": "hero__medium-image",
+                            "type": "image_aspect_ratio_crop",
+                            "instructions": "",
+                            "required": 1,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_5f686fd821b72",
+                                        "operator": "==",
+                                        "value": "medium"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "50",
+                                "class": "",
+                                "id": ""
+                            },
+                            "crop_type": "aspect_ratio",
+                            "aspect_ratio_width": 772,
+                            "aspect_ratio_height": 486,
+                            "return_format": "id",
+                            "preview_size": "medium",
+                            "library": "all",
+                            "min_width": "",
+                            "min_height": "",
+                            "min_size": "",
+                            "max_width": "",
+                            "max_height": "",
+                            "max_size": "",
+                            "mime_types": ""
+                        },
+                        {
+                            "key": "field_5f68af80e86b1",
+                            "label": "Tona ner bilden?",
+                            "name": "hero__tone-down-image",
+                            "type": "true_false",
+                            "instructions": "Tonar ner bilden för att öka kontrasten. Bra för t.ex. ljusa bilder där texten blir svårläst.",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_5f686fd821b72",
+                                        "operator": "==",
+                                        "value": "medium"
+                                    }
+                                ],
+                                [
+                                    {
+                                        "field": "field_5f686fd821b72",
+                                        "operator": "==",
+                                        "value": "low"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "default_value": 0,
+                            "ui": 1,
+                            "ui_on_text": "",
+                            "ui_off_text": ""
+                        },
+                        {
+                            "key": "field_5f68afb8ae23d",
+                            "label": "Rubrik",
+                            "name": "hero__title",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 1,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_5f686fd821b72",
+                                        "operator": "==",
+                                        "value": "medium"
+                                    }
+                                ],
+                                [
+                                    {
+                                        "field": "field_5f686fd821b72",
+                                        "operator": "==",
+                                        "value": "low"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_5f68affcae23f",
+                            "label": "Text",
+                            "name": "hero__text",
+                            "type": "text",
+                            "instructions": "Undertext. Kan lämnas tom för att endast visa rubrik.",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_5f686fd821b72",
+                                        "operator": "==",
+                                        "value": "low"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_5f68c4f40b44b": {
+                    "key": "layout_5f68c4f40b44b",
+                    "name": "image-with-text",
+                    "label": "Bild med text",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5f68c5010b44c",
+                            "label": "Bild",
+                            "name": "image-with-text__image",
+                            "type": "image",
+                            "instructions": "",
+                            "required": 1,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "id",
+                            "preview_size": "medium",
+                            "library": "all",
+                            "min_width": "",
+                            "min_height": "",
+                            "min_size": "",
+                            "max_width": "",
+                            "max_height": "",
+                            "max_size": "",
+                            "mime_types": ""
+                        },
+                        {
+                            "key": "field_5f68c51e0b44d",
+                            "label": "Text",
+                            "name": "image-with-text__text",
+                            "type": "textarea",
+                            "instructions": "",
+                            "required": 1,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "maxlength": "",
+                            "rows": 4,
+                            "new_lines": "br"
+                        },
+                        {
+                            "key": "field_5f69a29152d10",
+                            "label": "Begränsa höjd?",
+                            "name": "image-with-text__limit-height",
+                            "type": "true_false",
+                            "instructions": "Använder du en hög bild kan det ibland vara bra att begränsa höjden. T.ex. kan kvadratiska bilder se bra ut i mobilläge men bli för stora på datorskärmar. Detta innebär att den nedre delen av bilden klipps av när bilden överstiger den maxhjöjd du valt.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "default_value": 0,
+                            "ui": 1,
+                            "ui_on_text": "",
+                            "ui_off_text": ""
+                        },
+                        {
+                            "key": "field_5f69a2fe52d11",
+                            "label": "Maxhöjd",
+                            "name": "image-with-text__max-height",
+                            "type": "number",
+                            "instructions": "Max tillåten höjd i pixlar.",
+                            "required": 1,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_5f69a29152d10",
+                                        "operator": "==",
+                                        "value": "1"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "min": 1,
+                            "max": "",
+                            "step": ""
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_5d11c51edb4cf": {
+                    "key": "layout_5d11c51edb4cf",
+                    "name": "general-text",
+                    "label": "Fritext\/brödtext",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5d11c53adb4d0",
+                            "label": "Text",
+                            "name": "general-text__text",
+                            "type": "wysiwyg",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "tabs": "all",
+                            "toolbar": "full",
+                            "media_upload": 1,
+                            "delay": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_5cf5132c4cb09": {
+                    "key": "layout_5cf5132c4cb09",
+                    "name": "sidescrolling-cards",
+                    "label": "Puffar (scrollbara i sidled)",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5cf5137e4cb0a",
+                            "label": "Rubrik",
+                            "name": "sidescrolling-cards__title",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 1,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "50",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_5cf5138f4cb0b",
+                            "label": "\"Visa alla\"-länk",
+                            "name": "sidescrolling-cards__show-all-link",
+                            "type": "link",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "50",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "array"
+                        },
+                        {
+                            "key": "field_5cf513ba4cb0c",
+                            "label": "Typ av innehåll",
+                            "name": "sidescrolling-cards__type",
+                            "type": "radio",
+                            "instructions": "",
+                            "required": 1,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "page-links": "Sidlänkar",
+                                "product-links": "Produkter"
+                            },
+                            "allow_null": 0,
+                            "other_choice": 0,
+                            "default_value": "",
+                            "layout": "vertical",
+                            "return_format": "value",
+                            "save_other_choice": 0
+                        },
+                        {
+                            "key": "field_5cf66eb0486d2",
+                            "label": "Sidlänkar",
+                            "name": "sidescrolling-cards__page-links",
+                            "type": "repeater",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_5cf513ba4cb0c",
+                                        "operator": "==",
+                                        "value": "page-links"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "collapsed": "",
+                            "min": 1,
+                            "max": 0,
+                            "layout": "block",
+                            "button_label": "+ Lägg till länk",
+                            "sub_fields": [
+                                {
+                                    "key": "field_5cf66eb0486d3",
+                                    "label": "Bild",
+                                    "name": "sidescrolling-cards__page-link-image",
+                                    "type": "image_aspect_ratio_crop",
+                                    "instructions": "",
+                                    "required": 1,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "34",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "aspect_ratio_width": 413,
+                                    "aspect_ratio_height": 510,
+                                    "return_format": "id",
+                                    "preview_size": "thumbnail",
+                                    "library": "all",
+                                    "min_width": 413,
+                                    "min_height": 510,
+                                    "min_size": "",
+                                    "max_width": "",
+                                    "max_height": "",
+                                    "max_size": "",
+                                    "mime_types": "",
+                                    "crop_type": "aspect_ratio"
+                                },
+                                {
+                                    "key": "field_5cf7b6d3ba8a5",
+                                    "label": "Skugga nedre delen av bilden?",
+                                    "name": "sidescrolling-cards__bottom-shadow",
+                                    "type": "true_false",
+                                    "instructions": "Lägger på en lätt skugga på undre delen av bilden för att göra texten tydligare på ljusa bilder",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "33",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "message": "",
+                                    "default_value": 0,
+                                    "ui": 1,
+                                    "ui_on_text": "",
+                                    "ui_off_text": ""
+                                },
+                                {
+                                    "key": "field_5d11b87440cdb",
+                                    "label": "Lägg på toning på bilden?",
+                                    "name": "sidescrolling-cards__overlay",
+                                    "type": "true_false",
+                                    "instructions": "Lägger på en lätt toning över hela bilden. Använd på bilder med vit bakgrund som annars flyter ihop med bakgrunden.",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "33",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "message": "",
+                                    "default_value": 0,
+                                    "ui": 1,
+                                    "ui_on_text": "",
+                                    "ui_off_text": ""
+                                },
+                                {
+                                    "key": "field_5cf66eb0486d4",
+                                    "label": "Rubrik",
+                                    "name": "sidescrolling-cards__page-link-title",
+                                    "type": "text",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "34",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "maxlength": ""
+                                },
+                                {
+                                    "key": "field_5cf66eb0486d5",
+                                    "label": "Underrubrik",
+                                    "name": "sidescrolling-cards__page-link-subtitle",
+                                    "type": "text",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "33",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "maxlength": ""
+                                },
+                                {
+                                    "key": "field_5cf66eb0486d6",
+                                    "label": "Länk",
+                                    "name": "sidescrolling-cards__page-link-link",
+                                    "type": "link",
+                                    "instructions": "",
+                                    "required": 1,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "33",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "return_format": "array"
+                                }
+                            ]
+                        },
+                        {
+                            "key": "field_5cf518503ce04",
+                            "label": "Produkter",
+                            "name": "sidescrolling-cards__product-links",
+                            "type": "repeater",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_5cf513ba4cb0c",
+                                        "operator": "==",
+                                        "value": "product-links"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "collapsed": "",
+                            "min": 1,
+                            "max": 0,
+                            "layout": "table",
+                            "button_label": "+ Lägg till fler produkter",
+                            "sub_fields": [
+                                {
+                                    "key": "field_5cf63def1b2f7",
+                                    "label": "Produkt",
+                                    "name": "sidescrolling-cards__product",
+                                    "type": "post_object",
+                                    "instructions": "",
+                                    "required": 1,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "34",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "post_type": [
+                                        "product"
+                                    ],
+                                    "taxonomy": "",
+                                    "allow_null": 0,
+                                    "multiple": 0,
+                                    "return_format": "object",
+                                    "ui": 1
+                                },
+                                {
+                                    "key": "field_5d11b6e740cd9",
+                                    "label": "Skugga nedre delen av bilden?",
+                                    "name": "sidescrolling-cards__bottom-shadow",
+                                    "type": "true_false",
+                                    "instructions": "Lägger på en lätt skugga på undre delen av bilden för att göra texten tydligare på ljusa bilder",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "33",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "message": "",
+                                    "default_value": 0,
+                                    "ui": 1,
+                                    "ui_on_text": "",
+                                    "ui_off_text": ""
+                                },
+                                {
+                                    "key": "field_5d11b77840cda",
+                                    "label": "Lägg på toning på bilden?",
+                                    "name": "sidescrolling-cards__overlay",
+                                    "type": "true_false",
+                                    "instructions": "Lägger på en lätt toning över hela bilden. Använd på bilder med vit bakgrund som annars flyter ihop med bakgrunden.",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "33",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "message": "",
+                                    "default_value": 0,
+                                    "ui": 1,
+                                    "ui_on_text": "",
+                                    "ui_off_text": ""
+                                }
+                            ]
+                        },
+                        {
+                            "key": "field_5cf66e6e0b6c4",
+                            "label": "Test",
+                            "name": "sidescrolling-cards__test",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_5cf513ba4cb0c",
+                                        "operator": "==",
+                                        "value": "pagelinks"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_5f687336a24b2": {
+                    "key": "layout_5f687336a24b2",
+                    "name": "grid",
+                    "label": "Rutnät\/grid",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5f688ffd22d09",
+                            "label": "Antal kolumner i mobilläge",
+                            "name": "grid__column-count",
+                            "type": "select",
+                            "instructions": "",
+                            "required": 1,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "33",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "two": "2",
+                                "three": "3",
+                                "four": "4"
+                            },
+                            "default_value": false,
+                            "allow_null": 0,
+                            "multiple": 0,
+                            "ui": 0,
+                            "return_format": "value",
+                            "ajax": 0,
+                            "placeholder": ""
+                        },
+                        {
+                            "key": "field_5f689dac3944f",
+                            "label": "Antal kolumner i datorläge (små skärmar)",
+                            "name": "grid__column-count-small-desktop",
+                            "type": "select",
+                            "instructions": "",
+                            "required": 1,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "33",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "two": "2",
+                                "three": "3",
+                                "four": "4"
+                            },
+                            "default_value": false,
+                            "allow_null": 0,
+                            "multiple": 0,
+                            "ui": 0,
+                            "return_format": "value",
+                            "ajax": 0,
+                            "placeholder": ""
+                        },
+                        {
+                            "key": "field_5f68905bfe11a",
+                            "label": "Antal kolumner i datorläge (stora skärmar)",
+                            "name": "grid__column-count-large-desktop",
+                            "type": "select",
+                            "instructions": "",
+                            "required": 1,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "33",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "two": "2",
+                                "three": "3",
+                                "four": "4"
+                            },
+                            "default_value": false,
+                            "allow_null": 0,
+                            "multiple": 0,
+                            "ui": 0,
+                            "return_format": "value",
+                            "ajax": 0,
+                            "placeholder": ""
+                        },
+                        {
+                            "key": "field_5f687349a24b3",
+                            "label": "Rutor",
+                            "name": "grid__item-list",
+                            "type": "repeater",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "collapsed": "",
+                            "min": 1,
+                            "max": 0,
+                            "layout": "table",
+                            "button_label": "+ Lägg till fler",
+                            "sub_fields": [
+                                {
+                                    "key": "field_5f68737ea24b4",
+                                    "label": "Innehåll",
+                                    "name": "grid__item",
+                                    "type": "wysiwyg",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "tabs": "all",
+                                    "toolbar": "full",
+                                    "media_upload": 1,
+                                    "delay": 0
+                                }
+                            ]
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_5d0b2a6534dec": {
+                    "key": "layout_5d0b2a6534dec",
+                    "name": "call-to-action",
+                    "label": "Textpuff (”Call to action”)",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5d0b2b2b34dee",
+                            "label": "Text",
+                            "name": "call-to-action__text",
+                            "type": "textarea",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "50",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "maxlength": "",
+                            "rows": 3,
+                            "new_lines": "br"
+                        },
+                        {
+                            "key": "field_5d0b2c3eb090e",
+                            "label": "Variant",
+                            "name": "call-to-action__variant",
+                            "type": "radio",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "50",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "form": "Öppna formulär",
+                                "link": "Länka till sida"
+                            },
+                            "allow_null": 0,
+                            "other_choice": 0,
+                            "default_value": "",
+                            "layout": "vertical",
+                            "return_format": "value",
+                            "save_other_choice": 0
+                        },
+                        {
+                            "key": "field_5d0b2b6d34def",
+                            "label": "Länk",
+                            "name": "call-to-action__button",
+                            "type": "link",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_5d0b2c3eb090e",
+                                        "operator": "==",
+                                        "value": "link"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "array"
+                        },
+                        {
+                            "key": "field_5d0b328efde62",
+                            "label": "Knapptext",
+                            "name": "call-to-action__button-text",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 1,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_5d0b2c3eb090e",
+                                        "operator": "==",
+                                        "value": "form"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "50",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_5d0b32a4fde63",
+                            "label": "Formulär",
+                            "name": "call-to-action__form",
+                            "type": "CONTACT_FORM_7",
+                            "instructions": "",
+                            "required": 1,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_5d0b2c3eb090e",
+                                        "operator": "==",
+                                        "value": "form"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "50",
+                                "class": "",
+                                "id": ""
+                            }
+                        },
+                        {
+                            "key": "field_5d0b2b8f34df0",
+                            "label": "Bakgrundsfärg",
+                            "name": "call-to-action__background-color",
+                            "type": "radio",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "50",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "white": "Vit",
+                                "grey": "Ljusgrå",
+                                "red": "Röd"
+                            },
+                            "allow_null": 0,
+                            "other_choice": 0,
+                            "default_value": "",
+                            "layout": "horizontal",
+                            "return_format": "value",
+                            "save_other_choice": 0
+                        },
+                        {
+                            "key": "field_5d0b2b1534ded",
+                            "label": "Rubrik",
+                            "name": "call-to-action__title",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 1,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "50",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_5f6999cba4e30": {
+                    "key": "layout_5f6999cba4e30",
+                    "name": "global-cards",
+                    "label": "Fördefinierat innehåll: Puffar",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5f699a08a4e31",
+                            "label": "Information",
+                            "name": "",
+                            "type": "message",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "Visar \"puffarna\" som i tidigare layout alltid visats ovanför sidfoten. Innehållet i dessa är samma på alla ställen de används och kan redigeras på \"<a href=\"wp-admin\/admin.php?page=acf-options-sidfot\">Inställningar --> Sidfot\"<\/a>",
+                            "new_lines": "wpautop",
+                            "esc_html": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_5f699a87a4e32": {
+                    "key": "layout_5f699a87a4e32",
+                    "name": "global-logos",
+                    "label": "Fördefinierat innehåll: Märkeslogotyper",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5f699aa9a4e33",
+                            "label": "Information",
+                            "name": "",
+                            "type": "message",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "Visar märkeslogotyperna som i tidigare layout alltid visats ovanför sidfoten. Innehållet i dessa är samma på alla ställen de används och kan redigeras på \"<a href=\"wp-admin\/admin.php?page=acf-options-sidfot\">Inställningar --> Sidfot\"<\/a>",
+                            "new_lines": "wpautop",
+                            "esc_html": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                }
+            },
+            "button_label": "+ Lägg till ytterligare innehåll",
+            "min": "",
+            "max": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "page"
+            },
+            {
+                "param": "page_parent",
+                "operator": "!=",
+                "value": "3286"
+            },
+            {
+                "param": "page_type",
+                "operator": "==",
+                "value": "front_page"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "acf_after_title",
+    "style": "seamless",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [
+        "the_content",
+        "excerpt",
+        "discussion",
+        "comments",
+        "send-trackbacks"
+    ],
+    "active": true,
+    "description": "",
+    "modified": 1600760150
+}

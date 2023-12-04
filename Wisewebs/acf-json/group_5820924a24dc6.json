@@ -1,0 +1,218 @@
+{
+    "key": "group_5820924a24dc6",
+    "title": "Puffar",
+    "fields": [
+        {
+            "key": "field_5820925bbf5a6",
+            "label": "Puffar",
+            "name": "cards",
+            "type": "repeater",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "",
+            "min": 3,
+            "max": 3,
+            "layout": "row",
+            "button_label": "+ Lägg till",
+            "sub_fields": [
+                {
+                    "key": "field_582092e5bf5a9",
+                    "label": "Bakgrundsbild",
+                    "name": "image",
+                    "type": "image_crop",
+                    "instructions": "Bilden måste vara minst <strong>300 px bred<\/strong> och <strong>300 px hög<\/strong>. Använd en bild med transparent bakgrund för bästa effekt.",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "crop_type": "hard",
+                    "target_size": "cards",
+                    "width": "",
+                    "height": "",
+                    "preview_size": "medium",
+                    "force_crop": "yes",
+                    "save_in_media_library": "yes",
+                    "retina_mode": "no",
+                    "save_format": "object",
+                    "library": "all"
+                },
+                {
+                    "key": "field_58209284bf5a7",
+                    "label": "Rubrik",
+                    "name": "heading",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_582092d2bf5a8",
+                    "label": "Underrubrik",
+                    "name": "subheading",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_58209304bf5aa",
+                    "label": "Text",
+                    "name": "ingress",
+                    "type": "wysiwyg",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "tabs": "all",
+                    "toolbar": "full",
+                    "media_upload": 0,
+                    "delay": 0
+                },
+                {
+                    "key": "field_583d2da7013c6",
+                    "label": "Öppna formulär eller länka till sida?",
+                    "name": "popup_or_page_link",
+                    "type": "radio",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "page_link": "Länka till sida",
+                        "popup": "Formulär"
+                    },
+                    "allow_null": 0,
+                    "other_choice": 0,
+                    "default_value": "page_link",
+                    "layout": "vertical",
+                    "return_format": "value",
+                    "save_other_choice": 0
+                },
+                {
+                    "key": "field_58209474eadbd",
+                    "label": "Länk",
+                    "name": "link",
+                    "type": "page_link",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_583d2da7013c6",
+                                "operator": "==",
+                                "value": "page_link"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "post_type": "",
+                    "taxonomy": "",
+                    "allow_null": 0,
+                    "allow_archives": 1,
+                    "multiple": 0
+                },
+                {
+                    "key": "field_583d2e14013c7",
+                    "label": "Typ av popup",
+                    "name": "form",
+                    "type": "CONTACT_FORM_7",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_583d2da7013c6",
+                                "operator": "==",
+                                "value": "popup"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    }
+                },
+                {
+                    "key": "field_58209323bf5ab",
+                    "label": "Knapptext",
+                    "name": "link_text",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "acf-options-sidfot"
+            }
+        ]
+    ],
+    "menu_order": 1,
+    "position": "acf_after_title",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1561641470
+}
