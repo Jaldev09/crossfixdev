@@ -12,4 +12,5 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 ?>
+<div class="product-wrap">
 <h1 itemprop="name" class="product_title entry-title p-font"><?php the_title(); ?></h1>

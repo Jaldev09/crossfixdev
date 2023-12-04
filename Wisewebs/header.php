@@ -13,6 +13,8 @@ Use Wisewebs\Classes\Tracking;
 <html <?php language_attributes(); ?>>
 <head>
 	<link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/favicon.png" />
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+	<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.min.css'></link>  
 <?php
 	$yolo_options = yolo_get_options();
 	$yolo_footer_id = yolo_include_footer_id(); // Use this to fix get footer_id in footer block

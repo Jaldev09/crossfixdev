@@ -194,5 +194,107 @@ if ( ! empty( $_GET[ 'key' ] ) && ! empty( $_GET[ 'kco_confirm' ] ) && 'yes' ===
 <?php
 }
 ?>
+<?php 
+if(is_user_logged_in()) {
+    ?>
+    <script>
+    // document.addEventListener('DOMContentLoaded', function() {
+    //     var dropdown = document.getElementById('cf7-vehicle-list');
+    //     console.log(dropdown);
+    //     if (dropdown) {
+    //         dropdown.addEventListener('change', function() {
+    //             var selectedValue = dropdown.value;
+    //             document.querySelector('input[name="customer-vehicle-hidden-field"]').value = selectedValue;
+    //         });
+    //     }
+    // });
+    jQuery(document).ready(function($) {
+
+        $(document).on('change',"#select_boka_service,#select_boka_storage,#select_sell_machine", function() {   
+            $(this).removeAttr('selected');
+            $(this).find("option:selected").attr('selected', 'selected');
+        });   
+        $(document).on('submit','#book_service_form form.wpcf7-form', function() {    
+            var selectedValue = $(document).find("#select_boka_service :selected").val();
+            var splitValues = selectedValue.split('|');
+            var firstValue = splitValues[0];
+            var secondValue = splitValues[1];
+            $('input[name="boka-service-vehicle"]').val(firstValue);
+            $('input[name="service-vehicle-post-name"]').val(secondValue);
+        });
+        
+        $(document).on('submit','#book_storage_form form.wpcf7-form', function() {            
+            var selectedValue = $(document).find("#select_boka_storage :selected").val();
+            var splitValues = selectedValue.split('|');
+            var firstValue = splitValues[0];
+            var secondValue = splitValues[1];
+            $('input[name="boka-storage-vehicle"]').val(firstValue);
+            $('input[name="storage-vehicle-post-name"]').val(secondValue);
+        });
+
+        $(document).on('submit','#sell_machine_form form.wpcf7-form', function() {            
+            var selectedValue = $(document).find("#select_sell_machine :selected").val();
+            var splitValues = selectedValue.split('|');
+            var firstValue = splitValues[0];
+            var secondValue = splitValues[1];
+            $('input[name="sell-machine-vehicle"]').val(firstValue);
+            $('input[name="sell-machine-post-name"]').val(secondValue);
+        });
+    });
+    </script>
+    <?php
+}
+?>
+<?php 
+global $wp;
+$request = explode( '/', $wp->request );
+if( ( in_array('mitt-konto',$request)  && is_account_page() ) ){ 
+	$accessories_shortcode = get_field('accessories_shortcode','options');
+	$service_form_shortcode = get_field('service_form_shortcode','options');
+	$storage_form_shortcode = get_field('storage_form_shortcode','options');
+	$selling_machine_shortcode = get_field('selling_machine_shortcode','options');
+?>
+<div class="woo_account_settings modal" tabindex="-1" id="woo_account_settings">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="woo_accform_title"></h5>
+                <!-- <a href="javaScript:void(0);" class="btn-close" data-bs-dismiss="modal" aria-label="Close"><i class="fa fa-window-close" aria-hidden="true"></i></a> -->
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <?php if(!empty($accessories_shortcode)): ?>
+            <div class="account-custom-forms accessories-form" id="machine_accessories_form" style="display:none;">
+                <?php  echo do_shortcode($accessories_shortcode); ?>
+            </div>
+            <?php endif; ?>
+            <?php if(!empty($service_form_shortcode)): ?>
+            <div class="account-custom-forms book-service-form" id="book_service_form" style="display:none;">
+                <?php echo do_shortcode($service_form_shortcode); ?>
+            </div>
+            <?php endif; ?>
+            <?php if(!empty($storage_form_shortcode)): ?>
+            <div class="account-custom-forms book-storage-form" id="book_storage_form" style="display:none;">
+                <?php echo do_shortcode($storage_form_shortcode); ?>
+            </div>
+            <?php endif; ?>
+            <?php if(!empty($selling_machine_shortcode)): ?>
+            <div class="account-custom-forms sell-machine-form" id="sell_machine_form" style="display:none;">
+                <?php echo do_shortcode($selling_machine_shortcode); ?>
+            </div>
+            <?php endif; ?>
+            <!-- 
+      <div class="modal-body">
+        <p>Modal body text goes here.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div> -->
+        </div>
+    </div>
+</div>
+<?php } ?>
 </body>
 </html>

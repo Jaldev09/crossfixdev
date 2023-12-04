@@ -103,7 +103,7 @@ get_header( 'shop' ); ?>
 /**
  * @hooked - yolo_page_heading - 5
  **/
-do_action('yolo_before_page');
+// do_action('yolo_before_page');
 ?>
 <main class="<?php echo join(' ',$main_class) ?>">
 <?php
@@ -151,19 +151,49 @@ do_action('yolo_before_page');
 		 * @hooked woocommerce_upsell_display - 15
 		 * @hooked woocommerce_output_related_products - 20
 		 */
-		remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_product_data_tabs', 10 );
+		// remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_product_data_tabs', 10 );
 		remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_upsell_display', 15 );
 
 		do_action( 'woocommerce_after_single_product_summary' );
 
-		add_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_product_data_tabs', 10 );
+		// add_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_product_data_tabs', 10 );
 		add_action( 'woocommerce_after_single_product_summary', 'woocommerce_upsell_display', 15 );
+?>
+<?php 
+global $product;
+echo '<div class="container product-description"><h2>Productbeskrivning</h2>' . wpautop(wptexturize($product->get_description())) . '</div>';
 ?>
 </main>
 <div class="s-product-recommendations">
 <?php
 	woocommerce_upsell_display();
 	woocommerce_output_related_products();
+?>
+</div>
+<div class="container related-products ">
+	
+<?php
+$related_products = wc_get_related_products(get_the_ID(), 5); // Adjust the number as needed
+
+if (count($related_products) > 0) {
+	
+	echo '<h2>Likande produkter</h2>';
+	echo '<ul class="rel-products-slider owl-carousel owl-theme">';
+	
+	foreach ($related_products as $related_product_id) {
+		$related_product = wc_get_product($related_product_id);
+		echo '<li class="product item">';
+		echo '<a href="' . esc_url(get_permalink($related_product_id)) . '">';
+		echo $related_product->get_image();
+		echo '<span class="price">' . $related_product->get_price_html() . '</span>'; // Add product price
+		echo '<h3>' . esc_html($related_product->get_title()) . '</h3>';
+		echo '</a>';
+		echo '</li>';
+	}
+	
+	echo '</ul>';
+	
+}
 ?>
 </div>
 <?php
