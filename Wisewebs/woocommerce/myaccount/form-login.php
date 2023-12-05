@@ -34,19 +34,19 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 <?php endif; ?>
 
-		<h2><?php esc_html_e( 'Sign In', 'yolo-motor' ); ?></h2>
-		<p><?php esc_html_e( 'Sign in with your created account', 'yolo-motor' ); ?></p>
+		<h2><?php esc_html_e( 'LOGGA IN', 'yolo-motor' ); ?></h2>
+		<p><?php esc_html_e( 'Logga in med ditt skapade konto', 'yolo-motor' ); ?></p>
 
 		<form method="post" class="login">
 
 			<?php do_action( 'woocommerce_login_form_start' ); ?>
 
 			<p class="form-row form-row-wide">
-				<label for="username"><?php esc_html_e( 'Username or email address', 'yolo-motor' ); ?> <span class="required">*</span></label>
+				<label for="username"><?php esc_html_e( 'ANVÄNDARNAMN ELLER E-POSTADRESS', 'yolo-motor' ); ?> <span class="required">*</span></label>
 				<input type="text" class="woocommerce-Input woocommerce-Input--text input-text" name="username" id="username" value="<?php if ( ! empty( $_POST['username'] ) ) echo esc_attr( $_POST['username'] ); ?>" />
 			</p>
 			<p class="form-row form-row-wide">
-				<label for="password"><?php esc_html_e( 'Password', 'yolo-motor' ); ?> <span class="required">*</span></label>
+				<label for="password"><?php esc_html_e( 'LÖSENORD', 'yolo-motor' ); ?> <span class="required">*</span></label>
 				<input class="woocommerce-Input woocommerce-Input--text input-text" type="password" name="password" id="password" />
 			</p>
 
@@ -56,11 +56,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 				<?php wp_nonce_field( 'woocommerce-login' ); ?>
 				<input type="submit" class="button" name="login" value="<?php esc_attr_e( 'Login', 'yolo-motor' ); ?>" />
 				<label for="rememberme" class="inline">
-					<input class="woocommerce-Input woocommerce-Input--checkbox" name="rememberme" type="checkbox" id="rememberme" value="forever" /> <?php esc_html_e( 'Remember me', 'yolo-motor' ); ?>
+					<input class="woocommerce-Input woocommerce-Input--checkbox" name="rememberme" type="checkbox" id="rememberme" value="forever" /> <?php esc_html_e( 'Kom ihåg mig', 'yolo-motor' ); ?>
 				</label>
 			</p>
 			<p class="woocommerce-LostPassword lost_password">
-				<a href="<?php echo esc_url( wp_lostpassword_url() ); ?>"><?php esc_html_e( 'Forgot your password?', 'yolo-motor' ); ?></a>
+				<a href="<?php echo esc_url( wp_lostpassword_url() ); ?>"><?php esc_html_e( 'Glömt ditt lösenord?', 'yolo-motor' ); ?></a>
 			</p>
 
 			<?php do_action( 'woocommerce_login_form_end' ); ?>
@@ -73,8 +73,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 	<div class="u-column2 col-2">
 
-		<h2><?php esc_html_e( 'Create an new account', 'yolo-motor' ); ?></h2>
-		<p><?php esc_html_e( 'Create an account to track your orders, create a wishlist and more', 'yolo-motor' ); ?></p>
+		<h2><?php esc_html_e( 'SKAPA ETT NYTT KONTO', 'yolo-motor' ); ?></h2>
+		<p><?php esc_html_e( 'Skapa ett konto för att spåra dina beställningar, skapa en önskelista och mer', 'yolo-motor' ); ?></p>
 
 		<form method="post" class="register">
 
@@ -83,21 +83,21 @@ if ( ! defined( 'ABSPATH' ) ) {
 			<?php if ( 'no' === get_option( 'woocommerce_registration_generate_username' ) ) : ?>
 
 				<p class="form-row form-row-wide">
-					<label for="reg_username"><?php esc_html_e( 'Username', 'yolo-motor' ); ?> <span class="required">*</span></label>
+					<label for="reg_username"><?php esc_html_e( 'ANVÄNDARNAMN', 'yolo-motor' ); ?> <span class="required">*</span></label>
 					<input type="text" class="woocommerce-Input woocommerce-Input--text input-text" name="username" id="reg_username" value="<?php if ( ! empty( $_POST['username'] ) ) echo esc_attr( $_POST['username'] ); ?>" />
 				</p>
 
 			<?php endif; ?>
 
 			<p class="form-row form-row-wide">
-				<label for="reg_email"><?php esc_html_e( 'Email address', 'yolo-motor' ); ?> <span class="required">*</span></label>
+				<label for="reg_email"><?php esc_html_e( 'E-POSTADRESS', 'yolo-motor' ); ?> <span class="required">*</span></label>
 				<input type="email" class="woocommerce-Input woocommerce-Input--text input-text" name="email" id="reg_email" value="<?php if ( ! empty( $_POST['email'] ) ) echo esc_attr( $_POST['email'] ); ?>" />
 			</p>
 
 			<?php if ( 'no' === get_option( 'woocommerce_registration_generate_password' ) ) : ?>
 
 				<p class="form-row form-row-wide">
-					<label for="reg_password"><?php esc_html_e( 'Password', 'yolo-motor' ); ?> <span class="required">*</span></label>
+					<label for="reg_password"><?php esc_html_e( 'LÖSENORD', 'yolo-motor' ); ?> <span class="required">*</span></label>
 					<input type="password" class="woocommerce-Input woocommerce-Input--text input-text" name="password" id="reg_password" />
 				</p>
 
